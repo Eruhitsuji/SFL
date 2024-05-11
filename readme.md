@@ -6,7 +6,7 @@
 また，スクリプトファイルからの実行方法は次のとおりです．
 
 ```bash
-python SFL.py ファイルパス
+python SFL.py script_path1 script_path2 ...
 ```
 
 ## 文法
