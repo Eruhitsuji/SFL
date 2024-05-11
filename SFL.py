@@ -295,7 +295,14 @@ class CodeProcess():
             print("error : stack[0] type is invalid. ({})".format(stack[0]))
             exit()
 
-    def __init__(self,rs:str):
+    def __init__(self,arg,mode="str"):
+        if(isinstance(arg,str)and mode=="str"):
+            rs=arg
+        elif(isinstance(arg,list) and mode=="strlist"):
+            rs="("+",".join(arg)+")"
+        else:
+            print("error : input script")
+            exit()
         rs=rs.strip().replace("\n","").replace("\t","").replace(" ","")
 
         self.__FUNC_LIST={}
@@ -322,10 +329,11 @@ def main():
     if(len(sys.argv)>=2):
         l=[]
         for i,path in enumerate(sys.argv):
-            if(i==1):
+            if(i!=0):
                 with open(path,mode="r",encoding="utf-8") as f:
-                    l+=[li for li in f.readlines()]
-        CodeProcess("".join(l))
+                    tl=[li for li in f.readlines()]
+                    l.append("".join(tl))
+        CodeProcess(l,mode="strlist")
 
 if __name__ == "__main__":
     main()
