@@ -2,7 +2,8 @@
 
 [SFL.py](SFL.py)をimportして使用してください．
 サンプルコードは[sample](sample)です．
-実行方法は次のとおりです．
+
+また，スクリプトファイルからの実行方法は次のとおりです．
 
 ```bash
 python SFL.py ファイルパス
