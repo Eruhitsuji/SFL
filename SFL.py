@@ -331,7 +331,9 @@ def main():
         for i,path in enumerate(sys.argv):
             if(i!=0):
                 with open(path,mode="r",encoding="utf-8") as f:
-                    tl=[li for li in f.readlines()]
+                    tl=[]
+                    for li in f.readlines():
+                        tl.append(li.split("//")[0])
                     l.append("".join(tl))
         CodeProcess(l,mode="strlist")
 
