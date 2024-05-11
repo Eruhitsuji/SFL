@@ -216,6 +216,14 @@ rs="""(
         )
     ),
     (getvar,l2),
+    
+    (
+        setvar,
+        y,
+        (input)
+    ),
+    (getvar,y),
+    
     (
         print,
         (
@@ -225,6 +233,7 @@ rs="""(
         )
     ),
     (prints,((int,10),(getvar,l2))),
+    (prints,((int,10),(getvar,y))),
     
 )
 """

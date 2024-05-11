@@ -108,6 +108,7 @@ class listObj(BaseObj):
 
 class CodeProcess():
     PRINT_FUNC=lambda *args:print(*args,end="")
+    INPUT_FUNC=lambda :input(">>")
 
     def __code2stack(self,rs:str):
         tmp=""
@@ -270,6 +271,9 @@ class CodeProcess():
                 tl_l=[self.process(i).convChr() for i in stack[1]]
                 CodeProcess.PRINT_FUNC(*tl_l)
                 return None
+            elif(stack[0]=="input"):
+                s=CodeProcess.INPUT_FUNC()
+                return intObj(s)
 
             elif(stack[0] in self.__FUNC_LIST):
                 f_name=stack[0]
