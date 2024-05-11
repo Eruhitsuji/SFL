@@ -181,7 +181,7 @@ python SFL.py script_path1 script_path2 ...
 
 ### 標準入力
 
-```
+```SFL
 (input)
 ```
 
@@ -199,6 +199,58 @@ python SFL.py script_path1 script_path2 ...
 
 ```SFL
 (int,2)
+```
+
+### int型の加算
+
+```SFL
+(
+    add,
+    (
+        i1,
+        i2
+    )
+)
+```
+
+- 戻り値>加算した結果
+
+#### 4+3の例
+
+```SFL
+(
+    add,
+    (
+        (int,4),
+        (int,3)
+    )
+)
+```
+
+### int型のNAND演算
+
+```SFL
+(
+    nand,
+    (
+        i1,
+        i2
+    )
+)
+```
+
+- 戻り値>NAND演算した結果
+
+#### 4と3のNAND演算の例
+
+```SFL
+(
+    nand,
+    (
+        (int,4),
+        (int,3)
+    )
+)
 ```
 
 ### list型の定義
