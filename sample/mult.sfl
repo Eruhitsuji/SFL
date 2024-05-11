@@ -1,6 +1,4 @@
-import SFL
-
-rs="""(
+(
     (
         def,
         (
@@ -72,9 +70,4 @@ rs="""(
             )
         )
     )
-)"""
-cp=SFL.CodeProcess(rs)
-#print(cp.getStack())
-#print(cp.getFuncList())
-#print(cp.getVarList())
-#print(cp.getResultStr())
+)

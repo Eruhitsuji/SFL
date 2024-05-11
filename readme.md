@@ -1,7 +1,12 @@
 # SFL
 
 [SFL.py](SFL.py)をimportして使用してください．
-サンプルコードは[test_hello.py](test_hello.py)，[test_func.py](test_func.py)と[test_mult.py](test_mult.py)です．
+サンプルコードは[sample](sample)です．
+実行方法は次のとおりです．
+
+```bash
+python SFL.py ファイルパス
+```
 
 ## 文法
 

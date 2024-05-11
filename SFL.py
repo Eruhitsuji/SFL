@@ -1,3 +1,5 @@
+import sys
+
 class BaseObj():
     def _outstrReplace(s):
         return str(s).replace("'","").replace("\"","")
@@ -314,3 +316,16 @@ class CodeProcess():
         return [CodeProcess._toStringResultList(ri) if isinstance(ri,list) else str(ri) for ri in l]
     def getResultStr(self):
         return BaseObj._outstrReplace(CodeProcess._toStringResultList(self.__result))
+
+
+def main():
+    if(len(sys.argv)>=2):
+        l=[]
+        for i,path in enumerate(sys.argv):
+            if(i==1):
+                with open(path,mode="r",encoding="utf-8") as f:
+                    l+=[li for li in f.readlines()]
+        CodeProcess("".join(l))
+
+if __name__ == "__main__":
+    main()
